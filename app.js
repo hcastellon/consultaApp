@@ -4,6 +4,7 @@ const mysql = require('mysql2');
 
 const app = express();
 const authRoutes = require('./controllers/authController');
+const reportController = require('./controllers/reportController');
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -17,6 +18,7 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+app.use('/', reportController);
 
 // Route for the login page
 app.get('/login', (req, res) => {

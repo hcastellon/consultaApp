@@ -1,0 +1,32 @@
+<!-- results.ejs -->
+<h1>Resultados de la Consulta</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre Completo</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Última Conexión</th>
+            <th>Días sin Conexión</th>
+            <th>Foto de Perfil</th>
+            <th>Presentación Docente</th>
+            <th>Fecha de Informe</th>
+            <th>Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (const row of results) { %>
+            <tr>
+                <td><%= row.Nombre_Completo %></td>
+                <td><%= row.Nombres %></td>
+                <td><%= row.Apellidos %></td>
+                <td><%= row.Ultima_Conexion %></td>
+                <td><%= row.Dias_no_conexion %></td>
+                <td><%= row.Foto_perfil %></td>
+                <td><%= row.Presentacion_Docente %></td>
+                <td><%= row.Fecha_Informe %></td>
+                <td><%= row.Correo %></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
