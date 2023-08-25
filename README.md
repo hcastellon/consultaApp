@@ -1,39 +1,37 @@
-# ConsultaApp - Aplicación Web de Informes y Consultas
+# ConsultaApp - Web Report and Query Application
 
-ConsultaApp es una aplicación web desarrollada utilizando Node.js y Express.js que permite a los usuarios ejecutar informes y consultas de manera eficiente y organizada. La aplicación facilita la visualización de resultados filtrados y ofrece opciones para enviar información a través de correos electrónicos y mensajes de WhatsApp.
+ConsultaApp is a web application developed using Node.js and Express.js that allows users to efficiently and organizedly run reports and queries. The application facilitates the visualization of filtered results and offers options to send information through emails and WhatsApp messages.
 
-## Características Principales
+## Key Features
 
-- **Autenticación de Usuarios**: La aplicación proporciona una página de inicio de sesión donde los usuarios pueden ingresar sus credenciales. La sesión se mantiene activa para permitir una navegación sin problemas por el sitio.
+- **User Authentication**: The application provides a login page where users can enter their credentials. The session is kept active to allow seamless navigation throughout the site.
 
-- **Selección de Informes**: Los usuarios pueden elegir entre una variedad de informes y consultas a través de una interfaz intuitiva. Los informes están organizados en categorías para una fácil identificación.
+- **Report Selection**: Users can choose from a variety of reports and queries through an intuitive interface. Reports are organized into categories for easy identification.
 
-- **Ejecución de Consultas**: Al seleccionar un informe, los usuarios pueden ejecutar consultas a la base de datos MySQL. La aplicación se conecta a la base de datos y ejecuta los procedimientos almacenados correspondientes.
+- **Query Execution**: Upon selecting a report, users can execute queries to the MySQL database. The application connects to the database and runs the corresponding stored procedures.
 
-- **Visualización y Filtrado de Resultados**: Los resultados de las consultas se presentan en la interfaz de usuario. Los usuarios pueden filtrar los resultados según las columnas de las tablas, lo que permite una visualización más enfocada.
+- **Results Visualization and Filtering**: Query results are presented in the user interface. Users can filter the results based on table columns, allowing for a more focused visualization.
 
-- **Comunicación de Resultados**: Los usuarios pueden enviar información a través de correos electrónicos y mensajes de WhatsApp directamente desde la aplicación, basándose en los resultados de las consultas.
+- **Communication of Results**: Users can send information through emails and WhatsApp messages directly from the application, based on query results.
 
-## Estructura del Proyecto
+## Project Structure
+The project follows an organized structure to facilitate development and collaboration:
 
-El proyecto sigue una estructura organizada para facilitar el desarrollo y la colaboración:
+- `node_modules`: Directory containing project dependencies.
+- `public`: Contains static files like stylesheets and image resources.
+- `views`: Stores EJS templates for HTML views.
+- `routes`: Defines application routes and links to controllers.
+- `models`: Defines data models for interacting with the database.
+- `controllers`: Contains the business logic of the application.
+- `config`: Stores configuration files for different aspects.
+- `middlewares`: Directory for custom middlewares.
+- `app.js`: Entry point of the application.
+- `package.json`: Node.js configuration file.
+- `package-lock.json`: Locked dependencies.
+- `README.md`: This file with information about the project.
 
-- `node_modules`: Directorio que contiene las dependencias del proyecto.
-- `public`: Contiene archivos estáticos como hojas de estilo y recursos de imágenes.
-- `views`: Almacena plantillas EJS para las vistas HTML.
-- `routes`: Define las rutas de la aplicación y vincula a los controladores.
-- `models`: Define los modelos de datos para interactuar con la base de datos.
-- `controllers`: Contiene la lógica de negocios de la aplicación.
-- `config`: Almacena archivos de configuración para diferentes aspectos.
-- `middlewares`: Directorio para middlewares personalizados.
-- `app.js`: Punto de entrada de la aplicación.
-- `package.json`: Archivo de configuración de Node.js.
-- `package-lock.json`: Dependencias bloqueadas.
-- `README.md`: Este archivo con información sobre el proyecto.
-
-## Iniciar la Aplicación
-
-1. Clona este repositorio: `git clone [URL del repositorio]`
-2. Instala las dependencias: `npm install`
-3. Inicia el servidor: `npm start`
-4. Abre tu navegador y visita: `http://localhost:3000`
+## Starting the Application
+Clone this repository: `git clone (https://github.com/hcastellon/consultaApp)`
+Install dependencies: `npm install`
+Start the server: `npm start`
+Open your browser and visit: `http://localhost:3000`
