@@ -31,7 +31,7 @@ The project follows an organized structure to facilitate development and collabo
 - `README.md`: This file with information about the project.
 
 ## Starting the Application
-1. Clone this repository: `git clone (https://github.com/hcastellon/consultaApp)`
+1. Clone this repository: `git clone https://github.com/hcastellon/consultaApp`
 2. Install dependencies: `npm install`
 3. Start the server: `npm start`
 4. Open your browser and visit: `http://localhost:3000`

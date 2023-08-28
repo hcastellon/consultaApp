@@ -2,9 +2,13 @@ const express = require('express');
 const session = require('express-session');
 const mysql = require('mysql2');
 const path = require('path');
+const logger = require('morgan');
+const flash = require('express-flash');
+const cookieParser = require('cookie-parser');
+//const expressValidator = require('express-validator');
 
 const app = express();
-const authRoutes = require('./controllers/authController');
+const authController = require('./controllers/authController');
 const reportController = require('./controllers/reportController');
 const menuController = require('./controllers/menuController');
 
@@ -17,22 +21,29 @@ app.set('view engine', 'ejs');
 app.use(session({
     secret: 'j2ODBoRAZ0$@uYAp',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: { maxAge: 60000 }
 }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+
 app.use('/', reportController);
 app.use('/', menuController);
+// Route for the authentication page
+app.use('/', authController);
 app.use(express.static(publicDir));
+app.use(logger('dev'));
+app.use(cookieParser());
+//app.use(expressValidator());
+app.use(flash());
 
 // Route for the login page
 app.get('/index', (req, res) => {
     res.render('index');
 });
 
-// Route for the authentication page
-app.use(authRoutes);
+
 
 // Start the server
 const port = process.env.PORT || 3000;
