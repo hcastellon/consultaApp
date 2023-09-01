@@ -9,10 +9,16 @@
 </nav>
 <!-- menu.ejs -->
 <h1>Menú de Consultas</h1>
-<div class="card">
-    <a href="/consult1">Consulta 1</a>
-</div>
-<div class="card">
-    <a href="/consult2">Consulta 2</a>
-</div>
-<!-- ... otras tarjetas de consulta ... -->
+<% if (user) { %>
+    <div class="welcome-message">
+      <p>Bienvenido, <%= user.username %>!</p>
+      <p>Elige la consulta que quieres realizar:</p>
+    </div>
+  <% } %>
+  <div class="card">
+      <a href="/consult1">Consulta 1</a>
+  </div>
+  <div class="card">
+      <a href="/consult2">Consulta 2</a>
+  </div>
+  <!-- ... otras tarjetas de consulta ... -->
