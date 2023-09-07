@@ -28,10 +28,10 @@ app.use(session({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
-app.use('/', reportController);
-app.use('/', menuController);
+app.use('/report', reportController);
+app.use('/menu', menuController);
 // Route for the authentication page
-app.use('/', authController);
+app.use('/auth', authController);
 app.use(express.static(publicDir));
 app.use(logger('dev'));
 app.use(cookieParser());

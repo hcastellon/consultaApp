@@ -23,7 +23,7 @@ router.post('/login', async (req, res) => {
             const match = await bcrypt.compare(password, user.password);
             if (match) {
                 req.session.user = user;
-                res.redirect('/menu');
+                res.redirect('/menu/list');
             } else {
                 res.render('login', { error: 'Acceso inválido. Por favor, inténtelo otra vez.' });
             }
